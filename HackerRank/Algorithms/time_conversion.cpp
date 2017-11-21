@@ -1,16 +1,17 @@
-// C++ program to convert 12 hour to 24 hour
-// format
-#include<iostream>
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 using namespace std;
- 
-void print24(string str)
-{
-    // Get hours
-    int h1 = (int)str[1] - '0';
-    int h2 = (int)str[0] - '0';
-    int hh = (h2 * 10 + h1 % 10);
- 
-    // If time is in "AM"
+
+
+int main() {
+    char str[10];
+    cin>>str;
+    int h1 = int(str[0])-'0';
+    int h2 = int(str[1])-'0';
+    int hh = h1*10 + h2%10;
     if (str[8] == 'A')
     {
         if (hh == 12)
@@ -25,8 +26,6 @@ void print24(string str)
                 cout << str[i];
         }
     }
- 
-    // If time is in "PM"
     else
     {
         if (hh == 12)
@@ -43,12 +42,6 @@ void print24(string str)
                 cout << str[i];
         }
     }
-}
- 
-// Driver code
-int main()
-{
-   string str = "07:05:45PM";
-   print24(str);
-   return 0;
+    
+    return 0;
 }
