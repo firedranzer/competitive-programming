@@ -17,7 +17,6 @@ int main() {
         cin>>ch;
         if(ch=='U')     count++;
         if(ch=='D')     count--;
-        if(count==0)    valley++;
         if(!belowSea && count < 0)
             {
                 valley++;
