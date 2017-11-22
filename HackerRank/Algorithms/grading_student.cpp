@@ -7,7 +7,8 @@ int main(){
     for(int i=0; i<n; i++){
         cin>>A[i];
         if(A[i]>37){
-            A[i] += (5 - (A[i]%5));
+            if(A[i]%5>3)
+            {   A[i] += (5 - (A[i]%5));}
         }
     }
     for(int i=0; i<n; i++){
