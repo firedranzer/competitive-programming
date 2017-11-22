@@ -7,6 +7,17 @@ using namespace std;
 
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n;
+    char ch;
+    cin>>n;
+    int valley=0;
+    int count=0;
+    for(int i=0; i<n; i++){
+        cin>>ch;
+        if(ch=='U')     count++;
+        if(ch=='D')     count--;
+        if(count==0)    valley++;
+    }
+    cout<<valley;
     return 0;
 }
