@@ -1,4 +1,10 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
 #include <iostream>
+#include <algorithm>
+using namespace std;
+
 
 int main(){
     int n;
@@ -7,7 +13,7 @@ int main(){
     for(int i=0; i<n; i++){
         cin>>A[i];
         if(A[i]>37){
-            if(A[i]%5>3)
+            if(A[i]%5>2)
             {   A[i] += (5 - (A[i]%5));}
         }
     }
