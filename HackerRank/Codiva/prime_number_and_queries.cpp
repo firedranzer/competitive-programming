@@ -15,7 +15,7 @@ int main() {
     cin >> low >> high;
     int min=low;
     int max=low;
-    while (low < high)
+    while (low <= high)
     {
         flag = 0;
 
