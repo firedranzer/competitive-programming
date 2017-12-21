@@ -31,9 +31,9 @@ int main() {
     std::sort(v.begin(), v.end()); 
     auto last = std::unique(v.begin(), v.end());
     v.erase(last, v.end());
-    for(int i=0; i<v.size(); i++){
+    /*for(int i=0; i<v.size(); i++){
         cout<<v.at(i)<<endl;
-    }
+    }*/
     cout<<v.size()<<endl;
     return 0;
 }
