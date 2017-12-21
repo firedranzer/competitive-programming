@@ -15,9 +15,11 @@ int main() {
     if (row >= sqrt(n)) column = row; else column = row + 1;
     for(int i=0; i<column; i++){
         for(int j=0; j<row; j++){
-            cout<<s[j*column+i];
+            if(j*column+i<n){
+                cout<<s[j*column+i];
+            }
         }
-        cout<<" ";
+        cout<<' ';
     }
     return 0;
 }
