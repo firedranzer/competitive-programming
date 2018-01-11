@@ -3,14 +3,16 @@
 import sys
 
 def hackerlandRadioTransmitters(x, k):
-    count = 1
+    count = 0
     x.sort()
-    begin = x[0]
     for i in range(0, n):
-        if(x[i]>begin+2*k):
-            count = count + 1;
-            begin = x[i]
-    
+        count = count + 1
+        loc = x[i] + k
+        while(i<n and x[i]<=loc):
+            i = i+1
+        loc = x[i-1] + k;
+        while(i<n and x[i]<=loc):
+            i = i+1
     return count
 
 if __name__ == "__main__":
