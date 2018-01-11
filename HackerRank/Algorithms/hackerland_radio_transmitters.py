@@ -5,7 +5,8 @@ import sys
 def hackerlandRadioTransmitters(x, k):
     count = 0
     x.sort()
-    for i in range(0, n):
+    i = 0
+    while(i<n):
         count = count + 1
         loc = x[i] + k
         while(i<n and x[i]<=loc):
