@@ -7,21 +7,18 @@ using namespace std;
 
 
 int main() {
-    char A[80]="hackerrank";
-    char B[80];
+    string A="hackerrank";
+    string B;
     int pos=0;
     cin>>B;
     int count=0;
-    for(int i=0; A[i]!=0; i++){
-        int j = pos;
-        while(B[j]!=0){
-            if(A[i]==B[j]){ 
-                count++;
-                break;
-            }
+    for(int i=0; i<B.length(); i++){
+        
+        if(count <A.length() && B[i]==A[count]){
+            count++;
         }
     }
-    if(count<10)    cout<<"NO"<<endl;
-    else    cout<<"YES"<<endl;
+    if(count==10)    cout<<"YES"<<endl;
+    else    cout<<"NO"<<endl;
     return 0;
 }
