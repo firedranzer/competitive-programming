@@ -66,7 +66,7 @@ int main() {
     struct subset *subsets = (struct subset*) malloc( V * sizeof(struct subset));
 
     struct Edge mst[V-1];
-    mst_size = 0;
+    int mst_size = 0;
 
     //To Create a Spanning Tree such that all elements have rank 1 and each elements points to itself as parent.
     for(int i=0; i<V; i++){
@@ -82,7 +82,7 @@ int main() {
 
         if(x!=y){
             mst[mst_size++] = minEdge;
-            Union(x, y);
+            Union(subsets, x, y);
         }
         if(mst_size==V-1){
             break;
