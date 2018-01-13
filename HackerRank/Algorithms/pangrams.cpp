@@ -12,19 +12,25 @@ int main() {
     getline(cin, s);
     int a[26];
     int count=0;
+    int i;
     for(int i=0; i<s.length(); i++){
-        int x = tolower(s[i]);
-        if(isalpha(s[i])){
+        int x = s[i];
+        if(x>=65 && x<=90) 
+        {   
+           a[x-65]++;
+        }   
+        else if(x>=97 && x<=122)
+        {
             a[x-97]++;
         }
     }
 
     for(int i=0; i<26; i++){
-        if(a[i]>0){
-            count++;
+        if(a[i]==0){
+            break;
         }
     }
-    if(count==26){
+    if(i==26){
         cout<<"pangram";
     }
     else{
