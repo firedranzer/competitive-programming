@@ -14,14 +14,16 @@ int main() {
         string s;
         cin>>s;
         int n = s.length();
-        for( i=1, j=n-i; i<=n/2, j>=n/2; i++, j--){
-            int diff_f = (s[i]-s[i-1]);
-            int diff_r = (s[j]-s[j-1]);
+        string r = s;
+        std::reverse(r.begin(), r.end());
+        for( i=0; i<n; i++){
+            int diff_f = abs(s[i+1]-s[i]);
+            int diff_r = abs(r[i+1]-r[i]);
             if(diff_f==diff_r){
                 count++;
             }
         }
-        if(count==n/2){ cout<<"Funny\n";}
+        if(count==n-1){ cout<<"Funny\n";}
         else{   cout<<"Not Funny\n";}
     }
     return 0;
