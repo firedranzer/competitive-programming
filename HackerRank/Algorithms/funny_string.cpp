@@ -7,23 +7,23 @@ using namespace std;
 
 
 int main() {
-    int t, i, j;
+    int t, i;
     int count=0;
     cin>>t;
     while(t--){
         string s;
         cin>>s;
-        int n = s.length();
-        string r = s;
-        std::reverse(r.begin(), r.end());
-        for( i=0; i<n; i++){
-            int diff_f = abs(s[i+1]-s[i]);
-            int diff_r = abs(r[i+1]-r[i]);
-            if(diff_f==diff_r){
-                count++;
+        bool cond = true;
+        int n = s.length()-1;
+        for( i=1; i<s.length(); i++, n--){
+            int diff_f = abs(s[i]-s[i-1]);
+            int diff_r = abs(s[n]-s[n-1]);
+            if(diff_f!=diff_r){
+                cond = false;
+                break;
             }
         }
-        if(count==n-1){ cout<<"Funny\n";}
+        if(cond){ cout<<"Funny\n";}
         else{   cout<<"Not Funny\n";}
     }
     return 0;
