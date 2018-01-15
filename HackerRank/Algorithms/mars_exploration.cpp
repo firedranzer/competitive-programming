@@ -7,6 +7,18 @@ using namespace std;
 
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int count = 0;
+    string s, str;
+    getline(cin, s);
+    int n = s.length()/3;
+    for(int i=0; i<n; i++){
+        str.append("SOS");
+    }
+    for(int i=0; i<s.length(); i++){
+        if(s[i]!=str[i]){
+            count++;
+        }
+    }
+    cout<<count;
     return 0;
 }
