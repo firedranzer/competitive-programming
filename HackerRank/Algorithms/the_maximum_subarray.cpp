@@ -7,9 +7,10 @@ using namespace std;
 
 
 int main() {
-    int t, max_current, max_global, sum=0;
+    int t, max_current, max_global;
     cin>>t;
     while(t--){
+        int sum=0;
         int n;cin>>n;
         int a[10000];
         for(int i=0; i<n; i++){
@@ -23,11 +24,11 @@ int main() {
             }
         }
         for(int i=0;  i<n; i++){
-            if(A[i]>0){
-                sum += A[i];
+            if(a[i]>0){
+                sum += a[i];
             }
         }
-        cout<<
+        cout<<sum<<" ";
         cout<<max_global<<"\n";
     }
     return 0;
