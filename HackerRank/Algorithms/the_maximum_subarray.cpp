@@ -28,8 +28,8 @@ int main() {
                 sum += a[i];
             }
         }
-        cout<<sum<<" ";
-        cout<<max_global<<"\n";
+        cout<<max_global<<" ";
+        cout<<sum<<"\n";
     }
     return 0;
 }
