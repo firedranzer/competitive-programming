@@ -14,10 +14,10 @@ int main(){
     }
     
     sort(a.begin(),a.end());
-    vector<int> count(n, 0);
+    vector<int> count(n, 1);
     for(int i=0; i< a.size(); i++){
         //count[i] = 0;
-        for(int j=1; j<a.size(); j++){
+        for(int j=i+1; j<a.size(); j++){
             if(abs(a[i]-a[j])<=1){
                 count[i]++;
             }
