@@ -1,3 +1,5 @@
+//https://www.interviewbit.com/problems/pascal-triangle/
+
 vector<vector<int> > Solution::generate(int A) {
     vector<vector<int>> arr(A); // An auxiliary vector to store generated pscal triangle values
   // Iterate through every line and print integer(s) in it

@@ -1,3 +1,5 @@
+//https://www.interviewbit.com/problems/kth-row-of-pascals-triangle/
+
 int C(int line, int i){
     if(i == 0){
         return 1;
