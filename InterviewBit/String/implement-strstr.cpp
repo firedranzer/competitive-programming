@@ -1,18 +1,18 @@
 //https://www.interviewbit.com/problems/implement-strstr/
 
-int Solution::strStr(const string haystack, const string needle) {
-    
-    int n=haystack.length();
-    int z=needle.length();
-    if(n==0 || z==0)
+int Solution::strStr(const string A, const string B) {
+    int h = A.length();
+    int n = B.length();
+    if(h==0 || n==0){
         return -1;
-    int i,j;
-    for(i=0;i<n;i++){
-        if(haystack[i]==needle[0]){
-            j=0;
-            while(j<z && haystack[j+i]==needle[j]) j++;
-            if(j==z)
+    }
+    for(int i=0; i<h; i++){
+        int j=0;
+        if(B[0]==A[i]){
+            while(j<n && B[j]==A[i+j])    j++;
+            if(j==n){
                 return i;
+            }
         }
     }
     return -1;
